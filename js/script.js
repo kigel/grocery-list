@@ -1,51 +1,49 @@
-var inputBox = document.querySelector("input");
-var listBox = document.querySelector(".listBox");
-var button = document.querySelector(".btn");
+var input = document.querySelector("input");
+var addBtn = document.querySelector("#addBtn");
+var listBox = document.querySelector("#listBox");
+
 var divValue = 0;
-var currentListDivs = listBox.querySelectorAll(".listDiv");
-var currentListButtons = listBox.querySelectorAll(".listButton");
 
-button.addEventListener("click", addToList);
+addBtn.addEventListener("click", addToList);
 
-inputBox.addEventListener("keyup", (e) => {
+input.addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
         addToList();
     }
 });
 
 function addToList() {
-    if (inputBox.value != "") {
+    if (input.value != "") {
         divValue++;
         var newDiv = document.createElement("div");
-        var currentValue = inputBox.value;
         var newSpan = document.createElement("span");
-        var newButtonRemove = document.createElement("button");
+        var newBtnRemove = document.createElement("button");
+        var inputValue = input.value;
 
-        newSpan.textContent = currentValue;
-        newButtonRemove.textContent = "REMOVE";
-        newButtonRemove.classList = "listButton";
-        newDiv.id = "btn" + divValue;
+        newSpan.textContent = inputValue;
+        newBtnRemove.textContent = "REMOVE";
+        newBtnRemove.classList = "listButton" + " btn";
+        newDiv.id = "div" + divValue;
         newDiv.classList = "listDiv";
 
         newDiv.appendChild(newSpan);
-        newDiv.appendChild(newButtonRemove);
+        newDiv.appendChild(newBtnRemove);
         listBox.appendChild(newDiv);
     } else {
-        alert("please stop");
+        alert("You can't add an empty value!");
     }
 
     for (var i = 0; i < listBox.querySelectorAll(".listButton").length; i++) {
         listBox.querySelectorAll(".listButton")[i].addEventListener("click", removeFromList);
     }
 
-    inputBox.value = '';
+    input.value = "";
 }
 
 function removeFromList(e) {
-    var currentButton = e.currentTarget;
-    var currentDivId = currentButton.parentNode.id;
-    var currentString = '#' + currentDivId;
-    var currentDiv = listBox.querySelector(currentString);
+    var removingDivButton = e.currentTarget;
+    var removingDivId = removingDivButton.parentNode.id;
+    var removingDiv = listBox.querySelector('#' + removingDivId);
 
-    currentDiv.remove();
+    removingDiv.remove();
 }
