@@ -1,5 +1,6 @@
 * {
     color: white;
+    font-family: 'Roboto Mono', monospace;
 }
 
 body {
@@ -33,19 +34,21 @@ input:focus {
     outline-width: 2px;
     outline-style: solid;
     outline-color: rgb(255, 255, 255) !important;
+    background-color: rgb(20, 20, 20) !important;
 }
 
 button:active {
     outline-width: 2px;
     outline-style: solid;
     outline-color: rgb(255, 255, 255) !important;
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(50, 50, 50) !important;
 }
 
 button:hover, input:hover {
     outline-width: 2px;
     outline-style: solid;
     outline-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(29, 29, 29, 0.9);
 }
 
 #listBox {
@@ -56,7 +59,7 @@ button:hover, input:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(20, 20, 20);
+    background-color: rgba(29, 29, 29, 0.9);
     padding: 10px;
     margin: 10px;
 }
@@ -65,4 +68,22 @@ span {
     max-width: auto;
     white-space: normal;
     overflow: hidden;
+}
+
+.listBtn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#btnBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.removeBtn {
+    background-color: rgb(77, 10, 10);
+}
+
+.removeBtn:hover {
+    background-color: rgba(77, 10, 5, 0.514);
 }
