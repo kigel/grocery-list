@@ -1,0 +1,26 @@
+* {
+    color: white;
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+}
+
+.inputBox, .listBox, h1 {
+    background-color: rgb(71, 71, 71);
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.listBox {
+    width: 300px;
+}
+
+input, button {
+    background-color: rgb(20, 20, 20);
+}
