@@ -32,6 +32,7 @@ function addToList() {
         newSpanNum.textContent = 1;
         newSpanNum.classList = "spanNum";
         newSpanNumX.textContent = "x";
+        newSpanNumX.classList = "spanNumX";
         newSpanBox.classList = "spanBox";
         newBtnMinus.classList = "btnMinus" + " btnSpan";
         newBtnMinus.textContent = "-"

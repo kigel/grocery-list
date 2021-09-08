@@ -19,6 +19,16 @@ body {
     align-items: center;
 }
 
+@media screen and (max-width: 800px) {
+    #inputBox, #listBox, h1 {
+        width: 300px;
+    }
+
+    .listDiv {
+        flex-direction: column;
+    }
+}
+
 input, button {
     background-color: rgb(20, 20, 20);
     border: none;
@@ -101,7 +111,18 @@ button:hover, input:hover {
     margin-top: auto;
     margin-bottom: auto;
     height: 20px;
-    width: 20px;
+    width: 10px;
+    margin-right: 5px;
+}
+
+.spanNumX {
+    display: flex; 
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 20px;
+    width: 10px;
+    margin-left: 5px;
 }
 
 .spanBox {
